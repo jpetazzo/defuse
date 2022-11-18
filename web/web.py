@@ -240,7 +240,7 @@ def show(sql_query, sql_values=()):
     html += "<form method=POST action=/queue/push>\n"
     html += "Prompt:<input type=text name=prompt>\n"
     html += "Seed:<input type=text name=seed>\n"
-    html += "Steps:<input type=text name=num_inference_steps>\n"
+    html += "Steps:<input type=text name=num_inference_steps value=50>\n"
     html += "Model:<input type=text name=model value=CompVis/stable-diffusion-v1-4>\n"
     html += "<input type=submit>\n"
     html += "</form>\n"
