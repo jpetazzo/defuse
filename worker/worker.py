@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+import dotenv
 import torch
 from diffusers import StableDiffusionPipeline
 import json
@@ -12,7 +13,7 @@ import requests
 import socket
 import base64
 
-import hub
+dotenv.load_dotenv()
 
 logging.basicConfig(level=logging.INFO)
 log = logging.getLogger(__name__)
@@ -35,7 +36,7 @@ TORCH_DEVICE = os.environ.get(
 
 def update_status(message):
     log.info("Current status: {}".format(message))
-    hub.update_status(WORKER_ID, timetamp=time.time(), message=message)
+    # FIXME hub.update_status(WORKER_ID, timetamp=time.time(), message=message)
 
 
 update_status("loading model")
