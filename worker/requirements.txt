@@ -1,0 +1,11 @@
+accelerate
+diffusers
+ftfy
+invisible-watermark
+python-dotenv
+transformers==4.19.2
+
+#--extra-index-url https://download.pytorch.org/whl/cpu 
+torch
+torchvision
+torchaudio
